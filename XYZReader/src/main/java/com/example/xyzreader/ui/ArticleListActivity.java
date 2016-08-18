@@ -33,7 +33,7 @@ import com.example.xyzreader.data.UpdaterService;
  * touched, lead to a {@link ArticleDetailActivity} representing item details. On tablets, the
  * activity presents a grid of items as cards.
  */
-public class ArticleListActivity extends ActionBarActivity implements
+public class ArticleListActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String TAG = ArticleListActivity.class.getName();
@@ -58,7 +58,7 @@ public class ArticleListActivity extends ActionBarActivity implements
         int columnCount = getResources().getInteger(R.integer.list_column_count);
         StaggeredGridLayoutManager sglm =
                 new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
-        Log.i(TAG,"StaggeredGridLayoutManager set..");
+        //Log.i(TAG,"StaggeredGridLayoutManager set..");
         mRecyclerView.setLayoutManager(sglm);
         mRecyclerView.setHasFixedSize(true);
 
